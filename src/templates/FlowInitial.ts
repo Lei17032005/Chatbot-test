@@ -3,7 +3,9 @@ import { Registrado } from "./Registrado";
 
 const FlowInitial = addKeyword(EVENTS.WELCOME)
   .addAction(async (ctx, { state, gotoFlow }) => {
-    if (ctx.from != "593961053773"){return}
+    if (ctx.from != "593961053773") {
+      return;
+    }
     const nombre = await state.get("name");
     if (nombre) {
       return gotoFlow(Registrado);
@@ -18,7 +20,7 @@ const FlowInitial = addKeyword(EVENTS.WELCOME)
       const RespuestaUser = ctx.body;
       await state.update({ name: RespuestaUser });
 
-      await flowDynamic("Tengo tu nombre: " + RespuestaUser);
+      await flowDynamic("Te tengo visto: " + RespuestaUser);
 
       return gotoFlow(Registrado);
     }
