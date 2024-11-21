@@ -61,7 +61,7 @@ const Registrado = addKeyword(EVENTS.ACTION)
         ]);
         return endFlow();
       } else if (ctx.body.toLowerCase().includes("no")) {
-        return endFlow("Gracias por su visita");
+        return endFlow("Gracias por su tiempo");
       } else {
         return fallBack("Opcion no valida, Intente de nuevo");
       }
