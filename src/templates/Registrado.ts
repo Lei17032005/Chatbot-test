@@ -55,8 +55,7 @@ const Registrado = addKeyword(EVENTS.ACTION)
       if (ctx.body.toLowerCase().includes("si")) {
         await flowDynamic([
           {
-            body: "Producto seleccionado, Para proceder con la compre entre al siguiente link",
-            media: "https://i.imgur.com/e9twWaR.mp4",
+            body: "Producto seleccionado, Para proceder con la compre entre al siguiente link https://www.youtube.com/watch?v=dQw4w9WgXcQ",
           },
         ]);
         return endFlow();
